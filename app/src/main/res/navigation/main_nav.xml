@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.decagon.myrootapp.ui.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.decagon.myrootapp.ui.dashboard.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/howToFragment"
+        android:name="com.decagon.myrootapp.ui.planttree.HowToFragment"
+        android:label="fragment_how_to"
+        tools:layout="@layout/fragment_how_to" >
+        <action
+            android:id="@+id/action_howToFragment_to_treeTypeFragment"
+            app:destination="@id/treeTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.decagon.myrootapp.ui.planttree.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_locationFragment_to_reasonFragment"
+            app:destination="@id/reasonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/occasionFragment"
+        android:name="com.decagon.myrootapp.ui.planttree.OccasionFragment"
+        android:label="fragment_occasion"
+        tools:layout="@layout/fragment_occasion" >
+        <action
+            android:id="@+id/action_occasionFragment_to_howToFragment"
+            app:destination="@id/howToFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reasonFragment"
+        android:name="com.decagon.myrootapp.ui.planttree.ReasonFragment"
+        android:label="fragment_reason"
+        tools:layout="@layout/fragment_reason" >
+        <action
+            android:id="@+id/action_reasonFragment_to_occasionFragment"
+            app:destination="@id/occasionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treeTypeFragment"
+        android:name="com.decagon.myrootapp.ui.planttree.TreeTypeFragment"
+        android:label="fragment_tree_type"
+        tools:layout="@layout/fragment_tree_type" />
+</navigation>
