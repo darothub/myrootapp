@@ -3,4 +3,10 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="green_regular">#7AC83F</color>
+    <color name="green_light">#C2DC00</color>
+    <color name="error">#FF0000</color>
+    <color name="font_color_secondary">#FFFFFF</color>
+    <color name="font_color_primary">#5F5F5F</color>
+    <color name="font_color_hint">#BEBEBE</color>
 </resources>
