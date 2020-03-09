@@ -21,7 +21,11 @@
         android:id="@+id/forgotPasswordFragment"
         android:name="com.decagon.myrootapp.ui.login.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" />
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.decagon.myrootapp.ui.login.LoginFragment"

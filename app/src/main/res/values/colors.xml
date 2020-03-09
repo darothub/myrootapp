@@ -8,6 +8,6 @@
     <color name="error">#FF0000</color>
     <color name="font_color_secondary">#FFFFFF</color>
     <color name="font_color_primary">#5F5F5F</color>
-    <color name="font_color_hint">#BEBEBE</color>
+    <color name="font_color_hint">#9DA3B4</color>
     <color name="transparent">#00000000</color>
 </resources>
