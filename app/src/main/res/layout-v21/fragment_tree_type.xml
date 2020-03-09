@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.planttree.TreeTypeFragment"
+    android:background="@mipmap/wtot"
+    android:orientation="vertical"
+    android:weightSum="7">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.5"
+        >
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/backNavId"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/arrow"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar2Id"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="70dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.5"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImageTypeId"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="350dp"
+            android:src="@drawable/osehi"
+            />
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.5"
+        >
+
+        <TextView
+            android:id="@+id/headingId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/heading_typeTree"
+            android:textAlignment="center"
+            android:textColor="@color/green_regular"
+            android:textSize="@dimen/heading_typeTree" />
+
+        <TextView
+            android:id="@+id/instructionId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/instruction_typeTree"
+            android:textAlignment="center"
+            android:textSize="@dimen/instruction_typeTree" />
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.5"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="40dp"
+                android:layout_width="122dp"
+                android:layout_height="122dp"
+                android:layout_marginLeft="80dp"
+                app:cardCornerRadius="20dp"
+                android:elevation="8dp"
+                >
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/vscopyImageId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/vscopy"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="40dp"
+
+                        />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/vscopyPriceId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/green_regular"
+                            android:text="$50"
+                            android:layout_alignParentBottom="true"
+                            />
+
+                    </RelativeLayout>
+
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/vscopyTreeDescriptionId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/decorative_trees"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="90dp"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           >
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               >
+               <ImageView
+                   android:id="@+id/fullTreeTypeId"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@mipmap/fullTree"
+                   android:layout_gravity="center_vertical"
+                   android:layout_marginLeft="40dp"
+                   />
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/fullTreePriceId"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="120dp"
+                       android:textColor="@color/green_regular"
+                       android:text="$50"
+                       />
+
+               </RelativeLayout>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <TextView
+               android:id="@+id/fullTreeDescriptionId"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="43dp"
+               android:layout_marginLeft="60dp"
+               android:fontFamily="sans-serif"
+               android:text="Fruit Tree"
+               />
+
+
+       </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.5"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/treeCopyId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/treecopy"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/treeCopyPriceId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="90dp"
+                    android:textColor="@color/green_regular"
+                    android:text="$50"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/treeCopyDescriptionId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:text="Environmental Trees"
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        >
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="sans-serif"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/submit_typeTree"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
