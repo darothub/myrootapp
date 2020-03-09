@@ -5,9 +5,7 @@ import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.navigation.Navigation
 import androidx.navigation.testing.TestNavHostController
 import androidx.test.core.app.ApplicationProvider
-import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.*
-import androidx.test.espresso.ViewAction
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
@@ -17,10 +15,8 @@ import com.decagon.myrootapp.R
 import com.decagon.myrootapp.ui.getstarted.GetStartedFragment
 import org.hamcrest.CoreMatchers.`is`
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.security.AccessController
 
 
 @RunWith(AndroidJUnit4::class)
@@ -41,15 +37,15 @@ class GetStartedFragmentTest {
 
     @Test
     fun test_signUpButton_displays(){
-        val getStartedFramentScenario = launchFragmentInContainer<GetStartedFragment>()
+        launchFragmentInContainer<GetStartedFragment>()
         onView(withId(R.id.get_started_signup_btn)).check(matches(withText("Signup")))
     }
 
     @Test
     fun test_navigation_login(){
-        val getStartedFramentScenario = launchFragmentInContainer<GetStartedFragment>()
+        val getStartedFragmentScenario = launchFragmentInContainer<GetStartedFragment>()
 
-        getStartedFramentScenario.onFragment {
+        getStartedFragmentScenario.onFragment {
             Navigation.setViewNavController(it.requireView(), navController)
         }
 
@@ -59,9 +55,9 @@ class GetStartedFragmentTest {
 
     @Test
     fun test_navigation_signup(){
-        val getStartedFramentScenario = launchFragmentInContainer<GetStartedFragment>()
+        val getStartedFragmentScenario = launchFragmentInContainer<GetStartedFragment>()
 
-        getStartedFramentScenario.onFragment {
+        getStartedFragmentScenario.onFragment {
             Navigation.setViewNavController(it.requireView(), navController)
         }
 
