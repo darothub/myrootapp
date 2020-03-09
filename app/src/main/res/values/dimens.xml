@@ -5,4 +5,6 @@
     <dimen name="font_size_large">23sp</dimen>
     <dimen name="font_size_small">12sp</dimen>
     <dimen name="font_size_buttons">16sp</dimen>
+    <dimen name="padding_text">8dp</dimen>
+    <dimen name="margin_horizontal_input">40dp</dimen>
 </resources>
