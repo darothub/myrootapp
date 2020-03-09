@@ -16,4 +16,7 @@
     <string name="phone">Phone</string>
     <string name="have_an_account">Have an account? Sign in</string>
     <string name="submit">Submit</string>
+    <string name="image">image</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="dont_have_account">Don\'t have an account? Sign up</string>
 </resources>
