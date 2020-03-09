@@ -59,8 +59,8 @@
         android:label="fragment_success"
         tools:layout="@layout/fragment_success" >
         <action
-            android:id="@+id/action_successFragment_to_dashboardActivity"
-            app:destination="@id/dashboardActivity" />
+            android:id="@+id/action_successFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/verificationFragment"

@@ -20,4 +20,9 @@
     <string name="forgot_password">Forgot your password?</string>
     <string name="dont_have_account">Don\'t have an account? Sign up</string>
     <string name="forgot_password_title">Forgot password</string>
+    <string name="verification_text">Enter the 4 digit code sent\nto your email address</string>
+    <string name="verification">Verification</string>
+    <string name="verification_successful">Verification successful!</string>
+    <string name="verification_successful_text">Yor account has been verified\nplease login with your data</string>
+    <string name="got_it">Got it!</string>
 </resources>
