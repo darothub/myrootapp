@@ -34,5 +34,9 @@ class SignUpFragment : Fragment() {
         signup_have_an_account.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
         }
+
+        signup_back_btn.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 }

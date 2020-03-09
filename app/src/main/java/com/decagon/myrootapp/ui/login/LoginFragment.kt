@@ -44,6 +44,10 @@ class LoginFragment : Fragment() {
         login_forgot_pass_text.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
         }
+
+        login_back_btn.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
 }
