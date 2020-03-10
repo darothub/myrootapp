@@ -21,4 +21,12 @@
     <string name="anniversaries">Anniversary</string>
     <string name="others">Others</string>
     <string name="holidays">Holidays</string>
+    <string name="back_nav">Back Navigation</string>
+    <string name="fruit_type">Fruit trees</string>
+    <string name="Environmental_trees">Environmental trees</string>
+    <string name="tree_price">$50</string>
+    <string name="full_tree">Full Tree App</string>
+    <string name="christmas_tree">Christmas Tree-Type</string>
+    <string name="mahogany_tree">Mahogany Tree</string>
+    <string name="select_tree">Tree Selected</string>
 </resources>

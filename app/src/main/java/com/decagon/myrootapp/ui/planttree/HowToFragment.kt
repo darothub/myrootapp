@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 
 import com.decagon.myrootapp.R
 
@@ -19,6 +21,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class HowToFragment : Fragment() {
+
+    lateinit var buttonHowId:Button
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -29,6 +33,7 @@ class HowToFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     override fun onCreateView(
@@ -36,7 +41,15 @@ class HowToFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_how_to, container, false)
+        val view = inflater.inflate(R.layout.fragment_how_to, container, false)
+
+        buttonHowId = view.findViewById(R.id.buttonHowId)
+
+        buttonHowId.setOnClickListener {
+            view.findNavController().navigate(R.id.action_howToFragment_to_treeTypeFragment)
+        }
+
+        return view
     }
 
     companion object {

@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 
 import com.decagon.myrootapp.R
 
@@ -19,6 +21,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class SignUpFragment : Fragment() {
+
+    lateinit var signUp:Button
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -36,7 +40,14 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sign_up, container, false)
+        val view =  inflater.inflate(R.layout.fragment_sign_up, container, false)
+        signUp = view.findViewById(R.id.signUpButtonId)
+
+        signUp.setOnClickListener {
+            view.findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+        }
+
+        return view
     }
 
     companion object {
