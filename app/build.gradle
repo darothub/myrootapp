@@ -83,5 +83,8 @@ dependencies {
     androidTestImplementation 'androidx.test:rules:1.2.0'
     debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
 
+    //circular image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 
 }
