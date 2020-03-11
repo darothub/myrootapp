@@ -27,7 +27,7 @@ interface PaymentAPI {
     fun updatePaymentStatusAsync(): Deferred<PaymentResponse>
 
     companion object{
-        fun invoke(): PaymentAPI{
+        operator fun invoke(): PaymentAPI{
             val client = OkHttpClient.Builder().build()
             return Retrofit.Builder()
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())

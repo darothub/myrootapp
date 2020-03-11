@@ -32,7 +32,7 @@ interface AuthAPI {
 
 
     companion object{
-        fun invoke(): AuthAPI{
+        operator fun invoke(): AuthAPI{
             val client = OkHttpClient.Builder().build()
             return Retrofit.Builder()
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())
