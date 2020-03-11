@@ -27,14 +27,14 @@ interface PaymentAPI {
     fun updatePaymentStatusAsync(): Deferred<PaymentResponse>
 
     companion object{
-        fun invoke(): TreeAPI{
+        fun invoke(): PaymentAPI{
             val client = OkHttpClient.Builder().build()
             return Retrofit.Builder()
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(URLConstants.BASE_URL)
                 .build()
-                .create(TreeAPI::class.java)
+                .create(PaymentAPI::class.java)
         }
     }
 }
