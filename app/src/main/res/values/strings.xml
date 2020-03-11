@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">My Root App</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="background_image">background image</string>
     <string name="getstarted_top_text">World’s #1\nClimate Action App</string>
@@ -33,4 +32,24 @@
     <string name="anniversary_icon">Anniversary Icon</string>
     <string name="holiday_icon">Holiday Icon</string>
     <string name="others_icon">Others Icon</string>
+    <string name="signup">Signup</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="signup_text">To verify your identity. Please fill in\nyour personal information.</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="country">Country of residence</string>
+    <string name="phone">Phone</string>
+    <string name="have_an_account">Have an account? Sign in</string>
+    <string name="submit">Submit</string>
+    <string name="image">image</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="dont_have_account">Don\'t have an account? Sign up</string>
+    <string name="forgot_password_title">Forgot password</string>
+    <string name="verification_text">Enter the 4 digit code sent\nto your email address</string>
+    <string name="verification">Verification</string>
+    <string name="verification_successful">Verification successful!</string>
+    <string name="verification_successful_text">Yor account has been verified\nplease login with your data</string>
+    <string name="got_it">Got it!</string>
 </resources>
