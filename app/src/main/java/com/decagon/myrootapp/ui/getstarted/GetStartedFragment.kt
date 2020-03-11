@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class GetStartedFragment : Fragment() {
 
-    lateinit var getStartedButton:Button
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -42,11 +42,7 @@ class GetStartedFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_get_started, container, false)
 
-        getStartedButton = view.findViewById(R.id.getStartedButtonId)
 
-        getStartedButton.setOnClickListener {
-            view.findNavController().navigate(R.id.action_getStartedFragment_to_signUpFragment)
-        }
 
         return view
     }

@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class HowToFragment : Fragment() {
 
-    lateinit var buttonHowId:Button
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -43,11 +43,6 @@ class HowToFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_how_to, container, false)
 
-        buttonHowId = view.findViewById(R.id.buttonHowId)
-
-        buttonHowId.setOnClickListener {
-            view.findNavController().navigate(R.id.action_howToFragment_to_treeTypeFragment)
-        }
 
         return view
     }

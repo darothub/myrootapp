@@ -15,7 +15,7 @@ import com.decagon.myrootapp.R
  * A simple [Fragment] subclass.
  */
 class DashboardFragment : Fragment() {
-    lateinit var move1Button:Button
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,10 +23,7 @@ class DashboardFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        move1Button = view.findViewById(R.id.move1Id)
-        move1Button.setOnClickListener {
-            view.findNavController().navigate(R.id.action_dashboardFragment_to_locationFragment)
-        }
+
 
 
         return view

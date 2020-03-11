@@ -13,7 +13,7 @@ import com.decagon.myrootapp.R
 
 class LoginFragment : Fragment() {
 
-    lateinit var loginBtn:Button
+
 
     companion object {
         fun newInstance() = LoginFragment()
@@ -27,11 +27,7 @@ class LoginFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
-        loginBtn = view.findViewById(R.id.loginButtonId)
 
-        loginBtn.setOnClickListener {
-            view.findNavController().navigate(R.id.action_loginFragment_to_dashboardActivity)
-        }
 
         return view
     }

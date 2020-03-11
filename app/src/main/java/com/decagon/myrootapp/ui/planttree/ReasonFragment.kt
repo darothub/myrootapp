@@ -15,7 +15,7 @@ import com.decagon.myrootapp.R
  */
 class ReasonFragment : Fragment() {
 
-    lateinit var move2Button:Button
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,10 +23,7 @@ class ReasonFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_reason, container, false)
-        move2Button = view.findViewById(R.id.move3Id)
-        move2Button.setOnClickListener {
-            view.findNavController().navigate(R.id.action_reasonFragment_to_occasionFragment)
-        }
+
 
 
 
