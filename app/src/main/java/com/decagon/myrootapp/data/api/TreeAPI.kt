@@ -1,4 +1,4 @@
-package com.decagon.myrootapp.data.repositories
+package com.decagon.myrootapp.data.api
 
 import com.decagon.myrootapp.constants.URLConstants
 import com.decagon.myrootapp.constants.URLEndpoints
