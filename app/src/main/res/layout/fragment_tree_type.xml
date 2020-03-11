@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.planttree.TreeTypeFragment"
-    android:background="@mipmap/wtot"
+    android:background="@drawable/wtot"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -26,7 +26,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/arrow"
+                android:src="@drawable/arrow"
                 />
 
             <ProgressBar
@@ -119,7 +119,7 @@
                         android:id="@+id/vscopyImageId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/vscopy"
+                        android:src="@drawable/vscopy"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="40dp"
 

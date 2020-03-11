@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/wtot"
+    android:background="@drawable/wtot"
     android:fillViewport="true"
     >
 
@@ -34,7 +34,7 @@
                android:id="@+id/backNavTypeId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/arrow"
+                android:src="@drawable/arrow"
                 android:contentDescription="@string/back_nav"
                 />
 
@@ -144,7 +144,7 @@
                         android:id="@+id/vscopyImageId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/vscopy"
+                        android:src="@drawable/vscopy"
                         android:contentDescription="@string/christmas_tree"
                         />
                     <RelativeLayout
@@ -198,7 +198,7 @@
                    android:id="@+id/fullTreeTypeId"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:src="@mipmap/fulltree"
+                   android:src="@drawable/full_tree"
                    android:contentDescription="@string/full_tree"
                    />
                <RelativeLayout
@@ -254,7 +254,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/treecopy"
+                android:src="@drawable/treecopy"
                 android:contentDescription="@string/mahogany_tree"
                 />
             <RelativeLayout
