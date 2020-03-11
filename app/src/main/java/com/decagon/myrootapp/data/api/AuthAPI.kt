@@ -1,4 +1,4 @@
-package com.decagon.myrootapp.data.repositories
+package com.decagon.myrootapp.data.api
 
 import com.decagon.myrootapp.constants.URLConstants
 import com.decagon.myrootapp.constants.URLEndpoints
@@ -16,18 +16,18 @@ interface AuthAPI {
 
     @POST(URLEndpoints.VERIFICATION_ENDPOINT)
     fun verifyAsync(
-        @Field("body") body: VerificationCode
+        @Body body: VerificationCode
     ): Deferred<VerificationResponse>
 
     @POST(URLEndpoints.FORGOT_PASSWORD_ENDPOINT)
     fun forgotPasswordAsync(
-        @Field("body") email: ForgotPasswordBody
+        @Body email: ForgotPasswordBody
     ): Deferred<ForgotPasswordResponse>
 
 
     @POST(URLEndpoints.RESET_PASSWORD_ENDPOINT)
     fun resetPasswordAsync(
-        @Field("body") request: ResetPasswordBody
+        @Body request: ResetPasswordBody
     ): Deferred<ResetPasswordResponse>
 
 
