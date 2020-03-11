@@ -9,6 +9,7 @@ import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.POST
 import retrofit2.http.Query
@@ -16,8 +17,8 @@ import retrofit2.http.Query
 interface LoginAPI {
 
     @POST(URLEndpoints.USER_LOGIN_ENDPOINT)
-    fun login(
-        @Field("body") body: LoginBody
+    fun loginAsync(
+        @Body body: LoginBody
     ): Deferred<LoginResponse>
 
     companion object{

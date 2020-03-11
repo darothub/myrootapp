@@ -9,10 +9,7 @@ import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Field
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface TreeAPI {
 
@@ -21,7 +18,7 @@ interface TreeAPI {
 
     @POST(URLEndpoints.TREE_ENDPOINT)
     fun createTreeAsync(
-        @Field("body") tree: Tree
+        @Body tree: Tree
     ): Deferred<TreeResponse>
 
     @GET(URLEndpoints.SINGLE_TREE_ENDPOINT)

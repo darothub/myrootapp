@@ -9,16 +9,13 @@ import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Field
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface UserAPI {
 
     @POST(URLEndpoints.USER_ENDPOINT)
-    fun addUser(
-        @Field("body") user: UserBody
+    fun addUserAsync(
+        @Body user: UserBody
     ): Deferred<UserResponse>
 
 
