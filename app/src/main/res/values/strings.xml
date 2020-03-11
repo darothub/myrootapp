@@ -29,4 +29,8 @@
     <string name="christmas_tree">Christmas Tree-Type</string>
     <string name="mahogany_tree">Mahogany Tree</string>
     <string name="select_tree">Tree Selected</string>
+    <string name="in_person">In Person</string>
+    <string name="anniversary_icon">Anniversary Icon</string>
+    <string name="holiday_icon">Holiday Icon</string>
+    <string name="others_icon">Others Icon</string>
 </resources>
