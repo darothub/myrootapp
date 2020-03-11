@@ -1,16 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:src="@drawable/dashboard_bg"
+        android:scaleType="centerCrop"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="56dp"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/profile"
+            android:layout_marginEnd="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:weightSum="3">
+
+            <ImageView
+                android:contentDescription="@string/shrub"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_height="32dp"
+                android:src="@drawable/shrub"
+                android:layout_weight="1"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Countries54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:textSize="17sp"
+                    android:text="@string/the_54_countries"
+                    android:textColor="@color/green_regular"/>
+
+                <TextView
+                    android:id="@+id/noOfTrees"
+                    app:layout_constraintTop_toBottomOf="@id/Countries54"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="wrap_content"
+                    android:textSize="38.75sp"
+                    android:textColor="@color/green_regular"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_0"/>
+
+                <TextView
+                    android:id="@+id/noOfTreesAfrica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/font_color_dark"
+                    app:layout_constraintLeft_toRightOf="@id/noOfTrees"
+                    app:layout_constraintTop_toBottomOf="@id/Countries54"
+                    android:text="You have 0 trees planted "/>
+
+                <TextView
+                    android:id="@+id/onTheContinent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/font_color_dark"
+                    app:layout_constraintTop_toBottomOf="@id/noOfTreesAfrica"
+                    app:layout_constraintLeft_toRightOf="@id/noOfTrees"
+                    android:text="@string/in_the_54_countries_on_the_continent"/>
 
 
 
-</FrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:weightSum="3">
+
+            <ImageView
+                android:contentDescription="@string/shrub"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_height="54dp"
+                android:src="@drawable/tree"
+                android:layout_weight="1"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/grrenGreat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:textSize="17sp"
+                    android:text="@string/greengreat"
+                    android:textColor="@color/green_regular"/>
+
+                <TextView
+                    android:id="@+id/wallTrees"
+                    app:layout_constraintTop_toBottomOf="@id/grrenGreat"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="wrap_content"
+                    android:textSize="38.75sp"
+                    android:textColor="@color/green_regular"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_0"/>
+
+                <TextView
+                    android:id="@+id/noOfTreesWall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/font_color_dark"
+                    app:layout_constraintLeft_toRightOf="@id/wallTrees"
+                    app:layout_constraintTop_toBottomOf="@id/grrenGreat"
+                    android:text="You have 0 trees planted "/>
+
+                <TextView
+                    android:id="@+id/onTheWall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/font_color_dark"
+                    app:layout_constraintTop_toBottomOf="@id/noOfTreesWall"
+                    app:layout_constraintLeft_toRightOf="@id/wallTrees"
+                    android:text="@string/in_the_54_countries_on_the_continent"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="56dp"
+        android:textColor="@color/font_color_dark"
+        android:layout_marginStart="32dp"
+        android:text="Good Morning, Jane Doe!"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/font_color_dark"
+        android:text="@string/plant_a_tree_save_the_planet"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/font_color_dark"
+        android:text="@string/support_africa_by_creating_a_job"/>
+
+
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/plant_a_tree"
+        android:textAllCaps="false"
+        android:textColor="@color/font_color_secondary"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_signup_bg"/>
+
+
+</LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
