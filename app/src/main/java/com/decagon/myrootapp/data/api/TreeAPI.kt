@@ -32,7 +32,7 @@ interface TreeAPI {
     )
 
     companion object{
-        fun invoke(): TreeAPI{
+        operator fun invoke(): TreeAPI{
             val client = OkHttpClient.Builder().build()
             return Retrofit.Builder()
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())

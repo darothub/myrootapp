@@ -20,7 +20,7 @@ interface UserAPI {
 
 
     companion object{
-        fun invoke(): UserAPI{
+        operator fun invoke(): UserAPI{
             val okHttpClient = OkHttpClient.Builder()
                 .build()
             return Retrofit.Builder()

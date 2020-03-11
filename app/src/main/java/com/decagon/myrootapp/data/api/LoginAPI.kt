@@ -20,7 +20,7 @@ interface LoginAPI {
     ): Deferred<LoginResponse>
 
     companion object{
-        fun invoke(): LoginAPI{
+        operator fun invoke(): LoginAPI{
             val client = OkHttpClient.Builder().build()
             return Retrofit.Builder()
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())
