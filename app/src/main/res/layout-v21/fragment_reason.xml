@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.planttree.ReasonFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/why_bg"
+        android:scaleType="fitXY"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@color/font_color_secondary"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_marginTop="27dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/backbutton" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2Id"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="44dp"
+            android:progress="30"
+            android:progressTint="@color/green_regular"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
