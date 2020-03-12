@@ -25,11 +25,11 @@ object NetworkRepository {
     val TAG = "NETWORK REPOSITORY"
 
     //User
-    suspend fun createUser(userBody: UserBody): UserPayload{
-        var status : UserPayload? = null
+    suspend fun createUser(userBody: UserBody): UserResponse {
+        var status : UserResponse? = null
         withContext(Dispatchers.IO){
             try {
-                status = userApi.addUserAsync(userBody).await().payload
+                status = userApi.addUserAsync(userBody).await()
             }catch (t: Throwable){
                 Log.e(TAG, t.message.toString())
             }
