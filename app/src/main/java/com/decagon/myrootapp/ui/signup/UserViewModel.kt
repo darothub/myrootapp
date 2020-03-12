@@ -1,8 +1,12 @@
 package com.decagon.myrootapp.ui.signup
 
 import androidx.lifecycle.ViewModel
+import com.decagon.myrootapp.data.models.auth.ResetPasswordBody
+import com.decagon.myrootapp.data.models.auth.ResetPasswordResponse
 import com.decagon.myrootapp.data.models.auth.VerificationCode
 import com.decagon.myrootapp.data.models.auth.VerificationResponse
+import com.decagon.myrootapp.data.models.login.LoginBody
+import com.decagon.myrootapp.data.models.login.LoginResponse
 import com.decagon.myrootapp.data.models.user.UserBody
 import com.decagon.myrootapp.data.models.user.UserPayload
 import com.decagon.myrootapp.data.models.user.UserResponse
@@ -32,6 +36,22 @@ class UserViewModel : ViewModel(){
             verificationResponse = repository.verify(verificationCode)
         }
         return verificationResponse!!
+    }
+
+    fun login(loginBody: LoginBody): LoginResponse{
+        var response: LoginResponse? = null
+        scope.launch {
+            response = repository.loginUser(loginBody)
+        }
+        return response!!
+    }
+
+    fun resetPassword(resetPasswordBody: ResetPasswordBody): ResetPasswordResponse{
+        var response: ResetPasswordResponse? = null
+        scope.launch {
+            response = repository.resetPassword(resetPasswordBody)
+        }
+        return response!!
     }
 
 }
