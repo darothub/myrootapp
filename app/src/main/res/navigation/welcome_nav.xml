@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_forgotPasswordFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_newPasswordFragment"
+            app:destination="@id/newPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -76,4 +79,9 @@
         android:name="com.decagon.myrootapp.ui.dashboard.DashboardActivity"
         android:label="activity_dashboard"
         tools:layout="@layout/activity_dashboard" />
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.decagon.myrootapp.NewPasswordFragment"
+        android:label="fragment_new_password"
+        tools:layout="@layout/fragment_new_password" />
 </navigation>
