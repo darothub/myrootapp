@@ -11,7 +11,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 
 import com.decagon.myrootapp.R
+import com.decagon.myrootapp.data.Preferences
 import com.decagon.myrootapp.data.models.user.UserBody
+import com.decagon.myrootapp.data.models.user.UserPayload
 import com.decagon.myrootapp.data.models.user.UserResponse
 import kotlinx.android.synthetic.main.fragment_sign_up.*
 
@@ -39,7 +41,12 @@ class SignUpFragment : Fragment() {
 
 
         signup_submit_btn.setOnClickListener {
-            findNavController().navigate(R.id.action_signUpFragment_to_verificationFragment)
+            val response = sendUser()
+
+            if (response.status.equals("200")) {
+                saveUserInfo(response)
+                findNavController().navigate(R.id.action_signUpFragment_to_verificationFragment)
+            }
         }
 
         signup_have_an_account.paintFlags = Paint.UNDERLINE_TEXT_FLAG
@@ -64,5 +71,10 @@ class SignUpFragment : Fragment() {
         Log.d("USER REG", userBody.toString())
 
         return viewModel.createUser(userBody)
+    }
+
+    private fun saveUserInfo(userResponse: UserResponse){
+        this.activity?.let { Preferences.setEmail(it, userResponse.payload.email) }
+        this.activity?.let { Preferences.saveAuthToken(it, userResponse.token) }
     }
 }
