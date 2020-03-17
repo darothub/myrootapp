@@ -9,6 +9,7 @@ import com.decagon.myrootapp.data.models.login.LoginBody
 import com.decagon.myrootapp.data.models.login.LoginResponse
 import com.decagon.myrootapp.data.models.user.UserBody
 import com.decagon.myrootapp.data.models.user.UserPayload
+import com.decagon.myrootapp.data.models.user.UserResponse
 import com.decagon.myrootapp.utils.BaseRepository
 import com.decagon.myrootapp.utils.NetworkState
 import com.google.android.material.snackbar.Snackbar
