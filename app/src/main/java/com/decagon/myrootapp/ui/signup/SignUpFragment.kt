@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 
@@ -15,7 +16,10 @@ import com.decagon.myrootapp.data.Preferences
 import com.decagon.myrootapp.data.models.user.UserBody
 import com.decagon.myrootapp.data.models.user.UserPayload
 import com.decagon.myrootapp.data.models.user.UserResponse
+import kotlinx.android.synthetic.main.fragment_settings.*
 import kotlinx.android.synthetic.main.fragment_sign_up.*
+import kotlinx.android.synthetic.main.fragment_sign_up.signup_email_input
+import kotlinx.android.synthetic.main.fragment_sign_up.signup_phone_input
 
 
 class SignUpFragment : Fragment() {
@@ -46,6 +50,12 @@ class SignUpFragment : Fragment() {
             if (response.status.equals("200")) {
                 saveUserInfo(response)
                 findNavController().navigate(R.id.action_signUpFragment_to_verificationFragment)
+            } else {
+                Toast.makeText(
+                    this.context,
+                    "${response.status}, ${response.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
@@ -60,20 +70,45 @@ class SignUpFragment : Fragment() {
         }
     }
 
-    private fun sendUser(): UserResponse{
-        val email = signup_email_input.editText!!.text.toString()
-        val country = signup_country_input.editText!!.text.toString()
-        val name = signup_name_input.editText!!.text.toString()
-        val password = signup_password_input.editText!!.text.toString()
-        val phone = signup_phone_input.editText!!.text.toString()
-        val userBody = UserBody(country, email, false, name, password, phone)
+    private fun sendUser(): UserResponse {
+        var userBody: UserBody? = null
+        //verification
+        when {
+            signup_email_input.editText!!.text.isEmpty() -> {
+                signup_email_input.editText!!.error = "Email cannot be empty"
+            }
+            signup_phone_input.editText!!.text.isEmpty() -> {
+                signup_phone_input.editText!!.error = "Phone cannot be empty"
+            }
+            signup_country_input.editText!!.text.isEmpty() -> {
+                signup_country_input.editText!!.error = "Country cannot be empty"
+            }
+            signup_password_input.editText!!.text.isEmpty() -> {
+                signup_password_input.editText!!.error = "Password cannot be empty"
+            }
+            signup_password_input.editText!!.text.length < 6 -> {
+                signup_password_input.editText!!.error = "Password cannot be less than 6 characters"
+            }
+            signup_name_input.editText!!.text.isEmpty() -> {
+                signup_name_input.editText!!.error = "Name cannot be empty"
+            }
+            else -> {
+                val email = signup_email_input.editText!!.text.toString()
+                val country = signup_country_input.editText!!.text.toString()
+                val name = signup_name_input.editText!!.text.toString()
+                val password = signup_password_input.editText!!.text.toString()
+                val phone = signup_phone_input.editText!!.text.toString()
+                userBody = UserBody(country, email, false, name, password, phone)
+            }
+        }
 
-        Log.d("USER REG", userBody.toString())
 
-        return viewModel.createUser(userBody)
+//        Log.d("USER REG", userBody.toString())
+
+        return viewModel.createUser(userBody!!)
     }
 
-    private fun saveUserInfo(userResponse: UserResponse){
+    private fun saveUserInfo(userResponse: UserResponse) {
         this.activity?.let { Preferences.setEmail(it, userResponse.payload.email) }
         this.activity?.let { Preferences.saveAuthToken(it, userResponse.token) }
     }
