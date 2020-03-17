@@ -17,7 +17,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 class UserViewModel : ViewModel(){
-    private val repository = NetworkRepository
+    private val repository = NetworkRepository()
     private val job = Job()
     private val scope = CoroutineScope(job + Dispatchers.Main)
 
@@ -30,10 +30,10 @@ class UserViewModel : ViewModel(){
         return userPayload!!
     }
 
-    fun verifyCode(verificationCode: VerificationCode): VerificationResponse{
+    fun verifyCode(header: String, verificationCode: VerificationCode): VerificationResponse{
         var verificationResponse: VerificationResponse? = null
         scope.launch {
-            verificationResponse = repository.verify(verificationCode)
+            verificationResponse = repository.verify(header, verificationCode)
         }
         return verificationResponse!!
     }
