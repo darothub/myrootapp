@@ -86,4 +86,13 @@
     <string name="notifications">Notifications</string>
     <string name="newsletter">Newsletter</string>
     <string name="why_bg">why_bg</string>
+    <string name="goback">goBack</string>
+    <string name="create_a_new_password">Create a new Password</string>
+    <string name="instructions_to_reset_your_password_has">Instructions to reset your password has</string>
+    <string name="been_sent_to_your_mail">been sent to your mail</string>
+    <string name="lock">lock</string>
+    <string name="enter_code">Enter code</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm new Password</string>
+    <string name="don_t_have_an_account_sign_up"><u>Don\'t have an Account? Sign Up</u></string>
 </resources>
