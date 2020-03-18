@@ -9,6 +9,7 @@ import android.widget.Button
 import androidx.navigation.findNavController
 
 import com.decagon.myrootapp.R
+import com.decagon.myrootapp.databinding.FragmentReasonBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -22,12 +23,13 @@ class ReasonFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_reason, container, false)
+//        val view = inflater.inflate(R.layout.fragment_reason, container, false)
+        val binding = FragmentReasonBinding.inflate(inflater, container, false)
 
 
 
 
-        return view
+        return binding.root
     }
 
 }
