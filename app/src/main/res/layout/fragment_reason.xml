@@ -139,7 +139,9 @@
                         android:scaleX="2"
                         android:scaleY="2"
                         android:buttonTint="@color/green_regular"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:onClick="onCheckedBoxClicked"
+                        />
 
                 </LinearLayout>
 
@@ -200,7 +202,9 @@
                         android:scaleX="2"
                         android:scaleY="2"
                         android:buttonTint="@color/green_regular"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:onClick="onCheckedBoxClicked"
+                        />
 
                 </LinearLayout>
 
@@ -263,7 +267,9 @@
                         android:scaleX="2"
                         android:buttonTint="@color/green_regular"
                         android:scaleY="2"
-                        android:checked="false" />
+                        android:checked="false"
+                        android:onClick="onCheckedBoxClicked"
+                        />
 
                 </LinearLayout>
 
@@ -276,6 +282,7 @@
                 android:layout_height="1dp" />
 
             <Button
+                android:id="@+id/next_reasonBtn"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"

@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_howToFragment_to_treeTypeFragment"
             app:destination="@id/treeTypeFragment" />
+        <argument
+            android:name="Tree"
+            app:argType="com.decagon.myrootapp.data.models.tree.Tree" />
     </fragment>
     <fragment
         android:id="@+id/locationFragment"
@@ -39,6 +42,9 @@
         <action
             android:id="@+id/action_locationFragment_to_reasonFragment"
             app:destination="@id/reasonFragment" />
+        <argument
+            android:name="Tree"
+            app:argType="com.decagon.myrootapp.data.models.tree.Tree" />
     </fragment>
     <fragment
         android:id="@+id/occasionFragment"
@@ -48,6 +54,9 @@
         <action
             android:id="@+id/action_occasionFragment_to_howToFragment"
             app:destination="@id/howToFragment" />
+        <argument
+            android:name="Tree"
+            app:argType="com.decagon.myrootapp.data.models.tree.Tree" />
     </fragment>
     <fragment
         android:id="@+id/reasonFragment"
@@ -57,10 +66,17 @@
         <action
             android:id="@+id/action_reasonFragment_to_occasionFragment"
             app:destination="@id/occasionFragment" />
+        <argument
+            android:name="Tree"
+            app:argType="com.decagon.myrootapp.data.models.tree.Tree" />
     </fragment>
     <fragment
         android:id="@+id/treeTypeFragment"
         android:name="com.decagon.myrootapp.ui.planttree.TreeTypeFragment"
         android:label="fragment_tree_type"
-        tools:layout="@layout/fragment_tree_type" />
+        tools:layout="@layout/fragment_tree_type" >
+        <argument
+            android:name="Tree"
+            app:argType="com.decagon.myrootapp.data.models.tree.Tree" />
+    </fragment>
 </navigation>
