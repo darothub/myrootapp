@@ -92,46 +92,7 @@ class ReasonFragment : Fragment() {
 
         tree.reason = reason
         return tree
-//        if(view is CheckBox){
-//            val checked:Boolean = view.isChecked
-//
-//            when(view.id){
-//                R.id.climate_check -> {
-//                    if(checked){
-////                        reason?.isClimate = true
-//                        reason.isClimate = true
-//                    } else {
-////                        reason?.isClimate = false
-//                        reason.isClimate = false
-//                    }
-//                }
-//
-//                R.id.job_check -> {
-//                    if(checked){
-////                        reason?.isJob = true
-//                        reason.isJob = true
-//                    } else {
-////                        reason?.isJob = true
-//                        reason.isJob = false
-//                    }
-//                }
-//
-//                R.id.gift_check -> {
-//                    if(checked){
-////                        reason?.isGift = true
-//                        reason.isGift = true
-//                    } else {
-////                        reason?.isGift = false
-//                        reason.isGift = false
-//                    }
-//                }
-//
-//            }
-//
-//
-//        }
-//        tree.reason = reason
-//        return tree
+
     }
 
 }

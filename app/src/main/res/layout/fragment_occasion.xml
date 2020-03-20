@@ -112,13 +112,16 @@
                 android:layout_weight="1">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/your_birthdays"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    >
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/click_birthday"
                         android:layout_marginTop="0dp"
                         android:layout_width="122dp"
                         android:layout_height="122dp"
@@ -129,6 +132,7 @@
 
 
                     <TextView
+                        android:id="@+id/birthday_ocassion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/birthdays"
@@ -141,19 +145,23 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/your_anniversary"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    >
 
                     <ImageView
+                        android:id="@+id/click_anniversary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/drink"
                         android:contentDescription="@string/anniversary_icon" />
 
                     <TextView
+                        android:id="@+id/anniversar_ocassion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="40dp"
@@ -175,19 +183,23 @@
                 android:layout_weight="1">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/your_holiday"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    >
 
                     <ImageView
+                        android:id="@+id/click_holiday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/chair"
                         android:contentDescription="@string/holiday_icon" />
 
                     <TextView
+                        android:id="@+id/holiday_occassion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/holidays"
@@ -198,19 +210,23 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/your_others"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    >
 
                     <ImageView
+                        android:id="@+id/click_others"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/relax"
                         android:contentDescription="@string/others_icon" />
 
                     <TextView
+                        android:id="@+id/others_ocassion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
