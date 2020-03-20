@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 
 import com.decagon.myrootapp.R
+import com.decagon.myrootapp.databinding.FragmentLoginBinding
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {
@@ -24,7 +25,20 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_login, container, false)
+//        return inflater.inflate(R.layout.fragment_login, container, false)
+
+        val binding = FragmentLoginBinding.inflate(inflater,container, false)
+
+        binding.loginBtn.setOnClickListener {
+
+            findNavController().navigate(R.id.action_loginFragment_to_dashboardActivity)
+
+
+        }
+
+        return binding.root
+
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

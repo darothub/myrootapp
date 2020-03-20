@@ -16,6 +16,7 @@ import com.decagon.myrootapp.R
 class LocationFragment : Fragment() {
 
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

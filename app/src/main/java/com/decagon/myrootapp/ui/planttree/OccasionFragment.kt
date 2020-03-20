@@ -10,6 +10,7 @@ import android.widget.Toolbar
 import androidx.navigation.findNavController
 
 import com.decagon.myrootapp.R
+import com.decagon.myrootapp.databinding.FragmentOccasionBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -24,16 +25,16 @@ class OccasionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_occasion, container, false)
+//        val view = inflater.inflate(R.layout.fragment_occasion, container, false)
+
+        val binding = FragmentOccasionBinding.inflate(inflater, container, false)
 
 
 
 
 
 
-
-
-        return view
+        return binding.root
     }
 
 }

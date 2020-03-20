@@ -75,5 +75,5 @@
         android:id="@+id/dashboardActivity"
         android:name="com.decagon.myrootapp.ui.dashboard.DashboardActivity"
         android:label="activity_dashboard"
-        tools:layout="@layout/activity_dashboard" />
+        tools:layout="@layout/fragment_dashboard" />
 </navigation>

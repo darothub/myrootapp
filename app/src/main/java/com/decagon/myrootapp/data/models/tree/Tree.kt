@@ -8,18 +8,18 @@ import kotlinx.android.parcel.RawValue
 
 @Parcelize
 data class Tree(
-    var country: String,
-    var createdAt: String,
+    var country: String? = null,
+    var createdAt: String? = null,
     @SerializedName("_id")
-    var id: String,
-    var latitude: Int,
-    var locationType: String,
-    var longitude: Int,
-    var picture: String,
+    var id: String? = null,
+    var latitude: Int? = null,
+    var locationType: String? = null,
+    var longitude: Int? = null,
+    var picture: String? = null,
     var reason: @RawValue Reason? = null,
-    var treeType: String,
-    var updatedAt: String,
-    var userid: String,
+    var treeType: String? = null,
+    var updatedAt: String? = null,
+    var userid: String? = null,
     @SerializedName("__v")
-    var v: Int
+    var v: Int? = null
 ):Parcelable

@@ -14,8 +14,8 @@
             android:id="@+id/action_dashboardFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
         <action
-            android:id="@+id/action_dashboardFragment_to_locationFragment"
-            app:destination="@id/locationFragment" />
+            android:id="@+id/action_dashboardFragment_to_whereToPlantFragment"
+            app:destination="@id/whereToPlantFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -35,18 +35,6 @@
             app:argType="com.decagon.myrootapp.data.models.tree.Tree" />
     </fragment>
     <fragment
-        android:id="@+id/locationFragment"
-        android:name="com.decagon.myrootapp.ui.planttree.LocationFragment"
-        android:label="fragment_location"
-        tools:layout="@layout/fragment_location" >
-        <action
-            android:id="@+id/action_locationFragment_to_reasonFragment"
-            app:destination="@id/reasonFragment" />
-        <argument
-            android:name="Tree"
-            app:argType="com.decagon.myrootapp.data.models.tree.Tree" />
-    </fragment>
-    <fragment
         android:id="@+id/occasionFragment"
         android:name="com.decagon.myrootapp.ui.planttree.OccasionFragment"
         android:label="fragment_occasion"
@@ -56,7 +44,9 @@
             app:destination="@id/howToFragment" />
         <argument
             android:name="Tree"
-            app:argType="com.decagon.myrootapp.data.models.tree.Tree" />
+            app:argType="com.decagon.myrootapp.data.models.tree.Tree"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/reasonFragment"
@@ -68,13 +58,28 @@
             app:destination="@id/occasionFragment" />
         <argument
             android:name="Tree"
-            app:argType="com.decagon.myrootapp.data.models.tree.Tree" />
+            app:argType="com.decagon.myrootapp.data.models.tree.Tree"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/treeTypeFragment"
         android:name="com.decagon.myrootapp.ui.planttree.TreeTypeFragment"
         android:label="fragment_tree_type"
         tools:layout="@layout/fragment_tree_type" >
+        <argument
+            android:name="Tree"
+            app:argType="com.decagon.myrootapp.data.models.tree.Tree" />
+    </fragment>
+    <fragment
+        android:id="@+id/whereToPlantFragment"
+        android:name="com.decagon.myrootapp.WhereToPlantFragment"
+        android:label="WhereToPlantFragment"
+        tools:layout="@layout/fragment_where_to_plant"
+        >
+        <action
+            android:id="@+id/action_whereToPlantFragment_to_reasonFragment"
+            app:destination="@id/reasonFragment" />
         <argument
             android:name="Tree"
             app:argType="com.decagon.myrootapp.data.models.tree.Tree" />

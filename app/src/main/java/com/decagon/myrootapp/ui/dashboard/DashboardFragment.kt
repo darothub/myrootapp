@@ -18,7 +18,7 @@ import com.decagon.myrootapp.databinding.FragmentDashboardBinding
  */
 class DashboardFragment : Fragment() {
 
-    var plantTree:Tree? = null
+//    private var plantTree:Tree? = null
 
 
     override fun onCreateView(
@@ -32,8 +32,11 @@ class DashboardFragment : Fragment() {
 
         // pass the plantTree as argument upon click of the button
         binding.dashBoardBtn.setOnClickListener {
-            val action = DashboardFragmentDirections.actionDashboardFragmentToLocationFragment(plantTree!!)
-            findNavController().navigate(action)
+
+//            val action = DashboardFragmentDirections.actionDashboardFragmentToWhereToPlantFragment(plantTree!!)
+//            findNavController().navigate(action)
+
+            findNavController().navigate(R.id.action_dashboardFragment_to_whereToPlantFragment)
 
         }
 
