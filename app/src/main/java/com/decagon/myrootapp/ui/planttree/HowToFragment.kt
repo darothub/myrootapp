@@ -1,14 +1,18 @@
 package com.decagon.myrootapp.ui.planttree
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 import com.decagon.myrootapp.R
+import com.decagon.myrootapp.databinding.FragmentHowToBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +26,8 @@ private const val ARG_PARAM2 = "param2"
  */
 class HowToFragment : Fragment() {
 
+
+    val args:HowToFragmentArgs by navArgs()
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -41,10 +47,38 @@ class HowToFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_how_to, container, false)
+//        val view = inflater.inflate(R.layout.fragment_how_to, container, false)
+
+        val binding = FragmentHowToBinding.inflate(inflater, container, false)
+
+        var treeProperties = args.tree
+
+        binding.remoteMethod.setOnClickListener {
+
+            var locationType = binding.remoteId.text.toString()
+            treeProperties.locationType = locationType
+
+            Log.d("LOCATION_TYPE_TWO", "check arg content: $treeProperties")
+        }
+
+        binding.inPersonMethod.setOnClickListener {
+
+            var locationTypeTwo = binding.inPersonId.text.toString()
+            treeProperties.locationType = locationTypeTwo
+            Log.d("LOCATION_TYPE_THREE", "check arg content: $treeProperties")
+
+        }
+
+        binding.buttonHowId.setOnClickListener {
+
+            val action =HowToFragmentDirections.actionHowToFragmentToTreeTypeFragment(treeProperties)
+            findNavController().navigate(action)
+            Log.d("LOCATION_TYPE", "check arg content: $treeProperties")
+        }
 
 
-        return view
+
+        return binding.root
     }
 
     companion object {
