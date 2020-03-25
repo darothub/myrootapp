@@ -33,12 +33,12 @@
                 android:background="@color/font_color_secondary"
                 android:layout_height="56dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:src="@drawable/ic_back_arrow"
-                    android:layout_marginTop="27dp"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/backbutton" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_marginTop="27dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/back_button" />
 
                 <ProgressBar
                     android:id="@+id/progressBar2Id"
