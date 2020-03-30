@@ -12,7 +12,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@mipmap/howtoplant"
+        android:background="@drawable/how_to_plant"
         android:fillViewport="true">
 
 
@@ -39,7 +39,7 @@
                         android:id="@+id/backNavHowId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/arrow"
+                        android:src="@drawable/arrow"
                         android:contentDescription="@string/back_nav" />
 
                     <ProgressBar

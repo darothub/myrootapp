@@ -12,7 +12,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@mipmap/ocassiontype"
+        android:background="@drawable/ocassiontype"
         android:fillViewport="true">
 
 
@@ -39,7 +39,7 @@
                         android:id="@+id/backNavHowId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/arrow"
+                        android:src="@drawable/arrow"
                         android:tint="@color/font_color_secondary"
                         android:contentDescription="@string/back_nav" />
 
@@ -157,7 +157,7 @@
                         android:id="@+id/click_anniversary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/drink"
+                        android:src="@drawable/drink"
                         android:contentDescription="@string/anniversary_icon" />
 
                     <TextView
@@ -195,7 +195,7 @@
                         android:id="@+id/click_holiday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/chair"
+                        android:src="@drawable/chair"
                         android:contentDescription="@string/holiday_icon" />
 
                     <TextView
@@ -222,7 +222,7 @@
                         android:id="@+id/click_others"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/relax"
+                        android:src="@drawable/relax"
                         android:contentDescription="@string/others_icon" />
 
                     <TextView

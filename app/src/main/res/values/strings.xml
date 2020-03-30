@@ -52,7 +52,7 @@
     <string name="verification_successful">Verification successful!</string>
     <string name="verification_successful_text">Yor account has been verified\nplease login with your data</string>
     <string name="got_it">Got it!</string>
-    <string name="backbutton">backButton</string>
+    <string name="back_button">backButton</string>
     <string name="why_plant_a_tree">Why Plant a tree</string>
     <string name="choose_the_reason_for_planting_your_roots">Choose the reason for planting your roots</string>
     <string name="choose_the_reason_for">choose the reason for</string>

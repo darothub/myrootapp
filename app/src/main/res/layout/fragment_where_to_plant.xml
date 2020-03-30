@@ -27,7 +27,7 @@
                 android:src="@drawable/ic_back_arrow"
                 android:layout_marginTop="27dp"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/backbutton" />
+                android:contentDescription="@string/back_button" />
 
             <ProgressBar
                 android:id="@+id/progressBar2Id"
