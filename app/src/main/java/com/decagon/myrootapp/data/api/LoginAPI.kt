@@ -26,6 +26,7 @@ interface LoginAPI {
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(URLConstants.BASE_URL)
+                .client(client)
                 .build()
                 .create(LoginAPI::class.java)
         }
