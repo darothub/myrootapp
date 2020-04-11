@@ -1,5 +1,6 @@
 package com.decagon.myrootapp.ui.signup
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.decagon.myrootapp.data.models.auth.ResetPasswordBody
 import com.decagon.myrootapp.data.models.auth.ResetPasswordResponse
@@ -26,6 +27,7 @@ class UserViewModel : ViewModel(){
         var userPayload: UserResponse? = null
         scope.launch {
             userPayload = repository.createUser(userBody)
+            Log.d("UserViewModel", "this is the response:${userPayload}")
         }
         return userPayload!!
     }

@@ -36,6 +36,7 @@ class NetworkRepository(): BaseRepository() {
         withContext(Dispatchers.IO){
             try {
                 status = userApi.addUserAsync(userBody).await()
+                Log.d("NetworkRepository", "this is the status:${status}")
             }catch (t: Throwable){
                 Log.e(TAG, t.message.toString())
             }
