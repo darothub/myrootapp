@@ -1,262 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/ocassiontype"
-    android:fillViewport="true"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="Tree"
+            type="com.decagon.myrootapp.data.models.tree.Tree" />
+    </data>
 
-<androidx.appcompat.widget.LinearLayoutCompat
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.planttree.OccasionFragment"
-    android:orientation="vertical"
-    android:weightSum="5"
-    >
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/occaTbarId"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/ocassiontype"
+        android:fillViewport="true">
 
-        >
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <ImageView
-                android:id="@+id/backNavHowId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/arrow"
-                android:tint="@color/font_color_secondary"
-                android:contentDescription="@string/back_nav"
-                />
-
-            <ProgressBar
-                android:id="@+id/progressBar2HowId"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:progressTint="@color/font_color_secondary"
-                android:progress="80"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="260dp"
-                android:layout_height="1dp"
-
-                />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end"
-        >
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profileImageTypeId"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/osehi"
-            />
-
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        >
-
-        <TextView
-            android:id="@+id/headingOccId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="@string/ocassion_type"
-            android:textAlignment="center"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/heading_typeTree" />
-
-        <TextView
-            android:id="@+id/instructionOccId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textColor="#ffffff"
-            android:text="@string/instruction_ocassion"
-            android:textAlignment="center"
-            android:textSize="@dimen/instruction_typeTree" />
-
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_weight="1"
-        >
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            tools:context=".ui.planttree.OccasionFragment"
             android:orientation="vertical"
-            android:gravity="center"
-            >
+            android:weightSum="5">
 
-            <androidx.cardview.widget.CardView
-                android:layout_marginTop="0dp"
-                android:layout_width="122dp"
-                android:layout_height="122dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="8dp"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/occaTbarId"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
 
-                />
+                >
 
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
+                    <ImageView
+                        android:id="@+id/backNavHowId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow"
+                        android:tint="@color/font_color_secondary"
+                        android:contentDescription="@string/back_nav" />
 
-            <TextView
-                android:layout_width="wrap_content"
+                    <ProgressBar
+                        android:id="@+id/progressBar2HowId"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:progressTint="@color/font_color_secondary"
+                        android:progress="80"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="260dp"
+                        android:layout_height="1dp"
+
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/birthdays"
-                android:textColor="#ffffff"
-                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="end">
 
-                />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImageTypeId"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/osehi" />
 
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/headingOccId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/ocassion_type"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/heading_typeTree" />
+
+                <TextView
+                    android:id="@+id/instructionOccId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#ffffff"
+                    android:text="@string/instruction_ocassion"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/instruction_typeTree" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/your_birthdays"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/click_birthday"
+                        android:layout_marginTop="0dp"
+                        android:layout_width="122dp"
+                        android:layout_height="122dp"
+                        app:cardCornerRadius="20dp"
+                        android:elevation="8dp"
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/birthday_ocassion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/birthdays"
+                        android:textColor="#ffffff"
+                        android:layout_marginTop="10dp"
+
+                        />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/your_anniversary"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/click_anniversary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/drink"
+                        android:contentDescription="@string/anniversary_icon" />
+
+                    <TextView
+                        android:id="@+id/anniversar_ocassion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center"
+                        android:text="@string/anniversaries" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/your_holiday"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/click_holiday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/chair"
+                        android:contentDescription="@string/holiday_icon" />
+
+                    <TextView
+                        android:id="@+id/holiday_occassion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/holidays"
+                        android:textColor="#ffffff"
+                        android:layout_marginTop="20dp" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/your_others"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/click_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/relax"
+                        android:contentDescription="@string/others_icon" />
+
+                    <TextView
+                        android:id="@+id/others_ocassion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#ffffff"
+                        android:layout_gravity="center"
+                        android:text="@string/others" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/buttonOccId"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_button"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green_regular" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/drink"
-                android:contentDescription="@string/anniversary_icon"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:textColor="#ffffff"
-                android:layout_gravity="center"
-                android:text="@string/anniversaries"
-                />
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_weight="1"
-        >
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/chair"
-                android:contentDescription="@string/holiday_icon"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/holidays"
-                android:textColor="#ffffff"
-                android:layout_marginTop="20dp"
-                />
-
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/relax"
-                android:contentDescription="@string/others_icon"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:textColor="#ffffff"
-                android:layout_gravity="center"
-                android:text="@string/others"
-                />
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        >
-
-        <Button
-            android:id="@+id/buttonOccId"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/white_button"
-            android:fontFamily="sans-serif"
-            android:text="@string/next"
-            android:textAllCaps="false"
-            android:textColor="@color/green_regular" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-
-</androidx.appcompat.widget.LinearLayoutCompat>
-</androidx.core.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
+</layout>

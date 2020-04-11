@@ -10,11 +10,15 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 
 import com.decagon.myrootapp.R
+import com.decagon.myrootapp.data.models.tree.Tree
+import com.decagon.myrootapp.databinding.FragmentDashboardBinding
 
 /**
  * A simple [Fragment] subclass.
  */
 class DashboardFragment : Fragment() {
+
+//    private var plantTree:Tree? = null
 
 
     override fun onCreateView(
@@ -22,11 +26,22 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
+//        val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
+
+        val binding = FragmentDashboardBinding.inflate(inflater,container,false)
+
+        // pass the plantTree as argument upon click of the button
+        binding.dashBoardBtn.setOnClickListener {
+
+//            val action = DashboardFragmentDirections.actionDashboardFragmentToWhereToPlantFragment(plantTree!!)
+//            findNavController().navigate(action)
+
+            findNavController().navigate(R.id.action_dashboardFragment_to_whereToPlantFragment)
+
+        }
 
 
-
-        return view
+        return binding.root
     }
 
 }

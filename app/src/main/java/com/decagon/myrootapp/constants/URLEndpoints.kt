@@ -4,7 +4,7 @@ interface URLEndpoints {
     companion object{
         const val USER_ENDPOINT = "user"
         const val USER_LOGIN_ENDPOINT = "user/login"
-        const val VERIFICATION_ENDPOINT = "verify"
+        const val VERIFICATION_ENDPOINT = "auth/verify"
         const val FORGOT_PASSWORD_ENDPOINT = "forgot-password"
         const val RESET_PASSWORD_ENDPOINT = "reset-password"
         const val TREE_ENDPOINT = "tree"

@@ -1,314 +1,295 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/wtot"
-    android:fillViewport="true"
-    >
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="Tree"
+            type="com.decagon.myrootapp.data.models.tree.Tree" />
+    </data>
 
-<androidx.appcompat.widget.LinearLayoutCompat
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.planttree.TreeTypeFragment"
-    android:orientation="vertical"
-    android:weightSum="5"
-    >
-
-    <androidx.appcompat.widget.Toolbar
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/font_color_secondary"
-        >
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <ImageView
-               android:id="@+id/backNavTypeId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/arrow"
-                android:contentDescription="@string/back_nav"
-                />
-
-            <ProgressBar
-                android:id="@+id/progressBar2TypelId"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:progressTint="@color/green_regular"
-                android:progress="100"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="260dp"
-                android:layout_height="1dp"
-
-                />
+        android:layout_height="match_parent"
+        android:background="@drawable/wtot"
+        android:fillViewport="true">
 
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-
-
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end"
-        android:layout_weight="1"
-
-        >
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profileImageTypeId"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/osehi"
-            />
-
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_weight="1"
-        >
-
-        <TextView
-            android:id="@+id/headingId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="@string/heading_typeTree"
-            android:textAlignment="center"
-            android:textColor="@color/green_regular"
-            android:textSize="@dimen/heading_typeTree" />
-
-        <TextView
-            android:id="@+id/instructionId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="@string/instruction_typeTree"
-            android:textAlignment="center"
-            android:textSize="@dimen/instruction_typeTree" />
-
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_weight="1"
-        >
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:gravity="center"
-            android:layout_height="wrap_content"
+        <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            tools:context=".ui.planttree.TreeTypeFragment"
             android:orientation="vertical"
-            >
+            android:weightSum="5">
 
-            <androidx.cardview.widget.CardView
-                android:layout_marginTop="0dp"
-                android:layout_width="122dp"
-                android:layout_height="122dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="8dp"
-                >
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/font_color_secondary">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    >
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/vscopyImageId"
+                        android:id="@+id/backNavTypeId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/vscopy"
-                        android:contentDescription="@string/christmas_tree"
+                        android:src="@drawable/arrow"
+                        android:contentDescription="@string/back_nav" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar2TypelId"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:progressTint="@color/green_regular"
+                        android:progress="100"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="260dp"
+                        android:layout_height="1dp"
+
                         />
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:id="@+id/vscopyPriceId"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/green_regular"
-                            android:text="@string/tree_price"
-                            android:layout_alignParentBottom="true"
-                            />
-
-                    </RelativeLayout>
-
-
 
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
 
+            </androidx.appcompat.widget.Toolbar>
 
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/vscopyTreeDescriptionId"
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/decorative_trees"
-                android:fontFamily="sans-serif"
-                android:layout_marginTop="20dp"
-                />
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_weight="1"
+
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImageTypeId"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/osehi" />
 
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-       <androidx.appcompat.widget.LinearLayoutCompat
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:orientation="vertical"
-           android:gravity="center"
-           >
-           <androidx.appcompat.widget.LinearLayoutCompat
-               android:layout_width="wrap_content"
-               android:gravity="center"
-               android:layout_height="wrap_content"
-               android:layout_weight="1"
-               >
-               <ImageView
-                   android:id="@+id/fullTreeTypeId"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:src="@drawable/full_tree"
-                   android:contentDescription="@string/full_tree"
-                   />
-               <RelativeLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content">
-
-                   <TextView
-                       android:id="@+id/fullTreePriceId"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_marginTop="55dp"
-                       android:textColor="@color/green_regular"
-                       android:text="@string/tree_price"
-                       />
-
-               </RelativeLayout>
-
-
-           </androidx.appcompat.widget.LinearLayoutCompat>
-
-           <TextView
-               android:id="@+id/fullTreeDescriptionId"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="55dp"
-               android:fontFamily="sans-serif"
-               android:text="@string/fruit_type"
-               />
-
-
-       </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-
-        >
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            >
-
-            <ImageView
-                android:id="@+id/treeCopyId"
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/treecopy"
-                android:contentDescription="@string/mahogany_tree"
-                />
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
                 <TextView
-                    android:id="@+id/treeCopyPriceId"
+                    android:id="@+id/headingId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/heading_typeTree"
+                    android:textAlignment="center"
+                    android:textColor="@color/green_regular"
+                    android:textSize="@dimen/heading_typeTree" />
+
+                <TextView
+                    android:id="@+id/instructionId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/instruction_typeTree"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/instruction_typeTree" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/decorativeType"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="122dp"
+                        android:layout_height="122dp"
+                        app:cardCornerRadius="20dp"
+                        android:elevation="8dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/vscopyImageId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/vscopy"
+                                android:contentDescription="@string/christmas_tree" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/vscopyPriceId"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/green_regular"
+                                    android:text="@string/tree_price"
+                                    android:layout_alignParentBottom="true" />
+
+                            </RelativeLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/name_decorativeId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decorative_trees"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="20dp" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/fruitType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="56dp"
-                    android:textColor="@color/green_regular"
-                    android:text="@string/tree_price"
-                    />
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-            </RelativeLayout>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/fullTreeTypeId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/full_tree"
+                            android:contentDescription="@string/full_tree" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/fullTreePriceId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="55dp"
+                                android:textColor="@color/green_regular"
+                                android:text="@string/tree_price" />
+
+                        </RelativeLayout>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:id="@+id/name_fruitId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="55dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/fruit_type" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                >
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/environmentalType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/treeCopyId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/treecopy"
+                        android:contentDescription="@string/mahogany_tree" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/treeCopyPriceId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="56dp"
+                            android:textColor="@color/green_regular"
+                            android:text="@string/tree_price" />
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <TextView
+                    android:id="@+id/name_environmentalId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/Environmental_trees" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/treeTypeButtonId"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_bg"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/submit_typeTree"
+                    android:textAllCaps="false"
+                    android:contentDescription="@string/select_tree"
+                    android:textColor="#ffffff" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <TextView
-            android:id="@+id/treeCopyDescriptionId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="sans-serif"
-            android:text="@string/Environmental_trees"
-            />
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_weight="1"
-        >
-
-        <Button
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_bg"
-            android:fontFamily="sans-serif"
-            android:text="@string/submit_typeTree"
-            android:textAllCaps="false"
-            android:contentDescription="@string/select_tree"
-            android:textColor="#ffffff" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-    
-
-
-
-
-
-
-</androidx.appcompat.widget.LinearLayoutCompat>
-</androidx.core.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
+</layout>
