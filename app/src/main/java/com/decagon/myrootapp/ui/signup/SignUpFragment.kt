@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 
@@ -16,6 +18,7 @@ import com.decagon.myrootapp.data.Preferences
 import com.decagon.myrootapp.data.models.user.UserBody
 import com.decagon.myrootapp.data.models.user.UserPayload
 import com.decagon.myrootapp.data.models.user.UserResponse
+import com.decagon.myrootapp.utils.Result
 import kotlinx.android.synthetic.main.fragment_settings.*
 import kotlinx.android.synthetic.main.fragment_sign_up.*
 import kotlinx.android.synthetic.main.fragment_sign_up.signup_email_input
@@ -45,18 +48,29 @@ class SignUpFragment : Fragment() {
 
 
         signup_submit_btn.setOnClickListener {
+
+
             val response = sendUser()
 
-            if (response.status.equals("200")) {
-                saveUserInfo(response)
-                findNavController().navigate(R.id.action_signUpFragment_to_verificationFragment)
-            } else {
-                Toast.makeText(
-                    this.context,
-                    "${response.status}, ${response.message}",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+
+            response.observe(viewLifecycleOwner, Observer{
+                Log.d("SIGNUPFRAGMENTRESPONSE", "inside response:${it}")
+                when(it){
+                    is Result.Success -> {
+                        saveUserInfo(it.data)
+                        findNavController().navigate(R.id.action_signUpFragment_to_verificationFragment)
+                    }
+                    is Result.Error -> {
+                        Toast.makeText(
+                            this.context,
+                            "${it.exception.message}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            })
+
+
         }
 
         signup_have_an_account.paintFlags = Paint.UNDERLINE_TEXT_FLAG
@@ -70,7 +84,7 @@ class SignUpFragment : Fragment() {
         }
     }
 
-    private fun sendUser(): UserResponse {
+    private fun sendUser(): LiveData<Result<UserResponse>> {
         var userBody: UserBody? = null
         //verification
         when {
@@ -105,11 +119,13 @@ class SignUpFragment : Fragment() {
 
 //        Log.d("USER REG", userBody.toString())
 
+//         viewModel.createUser(userBody!!)
         return viewModel.createUser(userBody!!)
     }
 
     private fun saveUserInfo(userResponse: UserResponse) {
-        this.activity?.let { Preferences.setEmail(it, userResponse.payload.email) }
-        this.activity?.let { Preferences.saveAuthToken(it, userResponse.token) }
+
+        this.activity?.let { Preferences.setEmail(it, userResponse.payload?.email!!) }
+        this.activity?.let { Preferences.saveAuthToken(it, userResponse.token!!) }
     }
 }

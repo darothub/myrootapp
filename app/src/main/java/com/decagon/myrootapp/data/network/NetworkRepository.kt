@@ -12,6 +12,7 @@ import com.decagon.myrootapp.data.models.user.UserPayload
 import com.decagon.myrootapp.data.models.user.UserResponse
 import com.decagon.myrootapp.utils.BaseRepository
 import com.decagon.myrootapp.utils.NetworkState
+import com.decagon.myrootapp.utils.Result
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -31,17 +32,21 @@ class NetworkRepository(): BaseRepository() {
         get() = _networkState
 
     //User
-    suspend fun createUser(userBody: UserBody): UserResponse {
-        var status : UserResponse? = null
-        withContext(Dispatchers.IO){
+    suspend fun createUser(userBody: UserBody):Result<UserResponse>{
+//        var status : UserResponse? = null
+        return withContext(Dispatchers.IO){
             try {
-                status = userApi.addUserAsync(userBody).await()
-                Log.d("NetworkRepository", "this is the status:${status}")
+//                status = userApi.addUserAsync(userBody).await()
+//                Log.d("NetworkRepository", "this is the status:${status}"
+                Result.Success(userApi.addUserAsync(userBody).await())
+
             }catch (t: Throwable){
                 Log.e(TAG, t.message.toString())
+                Result.Error(t as Exception)
+
             }
         }
-        return status!!
+//        return status!!
     }
 
     //Login
