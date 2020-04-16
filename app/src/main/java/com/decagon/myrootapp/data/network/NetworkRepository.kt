@@ -63,16 +63,18 @@ class NetworkRepository(): BaseRepository() {
     }
 
     //Verification
-    suspend fun verify(header: String, verificationCode: VerificationCode): VerificationResponse{
+    suspend fun verify(header: String, verificationCode: VerificationCode): Result<VerificationResponse>{
         var response: VerificationResponse? = null
-        withContext(Dispatchers.IO){
+       return withContext(Dispatchers.IO){
             try {
-                response =   authAPI.verifyAsync(header,verificationCode).await()
+//                response =   authAPI.verifyAsync(header,verificationCode).await()
+                Result.Success(authAPI.verifyAsync(header,verificationCode).await())
             }catch (t: Throwable){
                 Log.e(TAG, t.message.toString())
+                Result.Error(t as Exception)
             }
         }
-        return response!!
+//        return response!!
     }
 
 

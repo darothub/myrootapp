@@ -22,6 +22,7 @@ class UserViewModel : ViewModel(){
     private val job = Job()
     private val scope = CoroutineScope(job + Dispatchers.Main)
     private val _userResponse = MutableLiveData<Result<UserResponse>>()
+    private val _verificationResponse = MutableLiveData<Result<VerificationResponse>>()
 
 
     fun createUser(userBody: UserBody): LiveData<Result<UserResponse>> {
@@ -35,12 +36,12 @@ class UserViewModel : ViewModel(){
         return _userResponse
     }
 
-    fun verifyCode(header: String, verificationCode: VerificationCode): VerificationResponse{
-        var verificationResponse: VerificationResponse? = null
+    fun verifyCode(header: String, verificationCode: VerificationCode): LiveData<Result<VerificationResponse>>{
+//        var verificationResponse: VerificationResponse? = null
         scope.launch {
-            verificationResponse = repository.verify(header, verificationCode)
+            _verificationResponse.value = repository.verify(header, verificationCode)
         }
-        return verificationResponse!!
+        return _verificationResponse
     }
 
     fun login(loginBody: LoginBody): LoginResponse{

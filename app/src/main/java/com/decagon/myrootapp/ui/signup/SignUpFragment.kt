@@ -85,7 +85,7 @@ class SignUpFragment : Fragment() {
     }
 
     private fun sendUser(): LiveData<Result<UserResponse>> {
-        var userBody: UserBody? = null
+        var userBody = UserBody()
         //verification
         when {
             signup_email_input.editText!!.text.isEmpty() -> {
@@ -120,7 +120,7 @@ class SignUpFragment : Fragment() {
 //        Log.d("USER REG", userBody.toString())
 
 //         viewModel.createUser(userBody!!)
-        return viewModel.createUser(userBody!!)
+        return viewModel.createUser(userBody)
     }
 
     private fun saveUserInfo(userResponse: UserResponse) {
